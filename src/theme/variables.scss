@@ -226,4 +226,18 @@
   ion-title.title-large {
     --color: white;
   }
+
+}
+
+ion-content > div{
+  --padding-top: 20px;
+  --padding-left : 10px;
+  --padding-right : 10px;
+}
+
+.img-dashboard {
+  
+  --padding-top: 20px;
+  --padding-left : 10px;
+  --padding-right : 10px;
 }

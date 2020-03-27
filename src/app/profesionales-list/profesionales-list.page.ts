@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { ProfesionalesDetailPage } from '../profesionales-detail/profesionales-detail.page';
 import { IProfesional } from 'src/models/profesional';
+import { profesionales } from 'src/mocks/profesionales';
 
 @Component({
   selector: 'app-profesionales-list',
@@ -11,7 +12,6 @@ import { IProfesional } from 'src/models/profesional';
 export class ProfesionalesListPage implements OnInit {
   profesionales : IProfesional[] = []
   
-  
   constructor(
     public modalCtrl : ModalController,
     public alertCtrl : AlertController) { }
@@ -20,18 +20,6 @@ export class ProfesionalesListPage implements OnInit {
    * Retorna el listado de profesionales disponibles
    */
   getProfesionalesList(){
-    let profesionales : IProfesional[] = [
-      {
-        nro_socio : 240,
-        nombre_apellido : 'Lic. Franca La Carrubba',
-        registro_nro : 63,
-        telefono_celular : `0981 417 533 / francalac@googlemail.com`,
-        hora_dia_disponible : 'lunes, miercoles, jueves a partir 20:30 hs',
-        modalidad_atencion : 'Email',
-        profesion_rama : 'psicologia'
-      }
-    ]
-
     this.profesionales = profesionales
   }
 

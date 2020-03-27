@@ -10,6 +10,7 @@ import { IProfesional } from 'src/models/profesional';
 export class ProfesionalesDetailPage implements OnInit {
 
   profesional : IProfesional
+  subjectText : "Buenas, me comunico desde COVID19py App"
 
   constructor(
     public navParams : NavParams,

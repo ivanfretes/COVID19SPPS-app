@@ -1,6 +1,6 @@
 <ion-header translucent>
-  <ion-toolbar>
-    <ion-title>{{ profesional.nombre_apellido }}</ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-title>{{ profesional.nombre_apellido | titlecase }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismissModal()">Cerrar</ion-button>
     </ion-buttons>
@@ -10,28 +10,76 @@
 <ion-content>
     <ion-list>
       <ion-item>
-        <ion-label>Área: {{ profesional.profesion_rama | uppercase }}</ion-label>
+        <ion-label><b>Área:</b> {{ profesional.profesion_rama | titlecase }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Nro de Socio: {{ profesional.nro_socio }}</ion-label>
+        <ion-label><b>Nro de Socio:</b> {{ profesional.nro_socio }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Nro de Registro: {{ profesional.registro_nro }} </ion-label>
+        <ion-label><b>Nro de Registro:</b> {{ profesional.registro_nro }} </ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Télefono/Celular: {{ profesional.telefono_celular }}</ion-label>
+        <ion-label><b>Télefono/Celular:</b> {{ profesional.telefono_celular }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Disponibilidad: {{ profesional.hora_dia_disponible }}</ion-label>
+        <ion-label><b>Email / Skype:</b> {{ profesional.email }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Disponibilidad:</b> <div [innerHTML]="profesional.hora_dia_disponible | titlecase "></div></ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-label>Modalidad de Atención: {{ profesional.modalidad_atencion }}</ion-label>
+        <ion-label><b>Modalidad de Atención:</b> 
+          <div *ngFor="let m of profesional.modalidad_atencion" [innerHTML]="m | titlecase"></div>
+        </ion-label>
       </ion-item>
       
-      <ion-button expand="block" type="button" (click)="contactarProfesional()">
-          Contactar
-      </ion-button>
+      <div *ngFor="let m of profesional.modalidad_atencion" (click)="contactarProfesional()">
+        <!--ion-button href="https://wa.me/595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}?text={{ subjectText }}" 
+            expand="block" 
+            color="success"
+            type="button"  
+            *ngIf="m.toLowerCase() == 'whatsapp'"> Contactar al Whatsapp 
+        </ion-button-->
+
+		
+		<ion-button href="whatsapp:/send?phone=595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}&text={{ subjectText }}" 
+            expand="block" 
+            color="success"
+            type="button"  
+            *ngIf="m.toLowerCase() == 'whatsapp'"> Enviar un Whatsapp 
+        </ion-button>
+
+        <ion-button expand="block" 
+			href="mailto:{{ profesional.email.trim() }}&subject={{ subjectText }}"
+          	color="danger"
+            type="button"  
+            *ngIf="m.toLowerCase() == 'email'"> Enviar un Email
+        </ion-button>
+
+        <ion-button expand="block" 
+            color="tertiary"
+            type="button"  
+            *ngIf="m.toLowerCase() == 'skype'"> Contactar Por Skype
+        </ion-button>
+
+        <ion-button expand="block" 
+          	color="primary"
+            type="button"  
+			href="sms://+595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}"
+            *ngIf="m.toLowerCase() == 'sms'"> Enviar un SMS
+        </ion-button>
+
+
+        <ion-button expand="block" 
+          	href="tel:+595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}"
+          	color="dark"
+          	type="button"  
+          	*ngIf="m.toLowerCase().indexOf('llama') != -1 && m.toLowerCase().indexOf('video') == -1"> Llamar
+        </ion-button>
+          
+      </div>
+      
     </ion-list>
   
     

@@ -75,7 +75,7 @@ export class AppComponent implements OnInit {
 
     // GET nueva version
     setTimeout(()=> {
-      this.existeNuevaCompilacion = true; 
+      //this.existeNuevaCompilacion = true; 
     }, 5000)
   }
 

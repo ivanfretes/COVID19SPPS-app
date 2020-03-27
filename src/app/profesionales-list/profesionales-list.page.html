@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="tertiary"> 
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -8,17 +8,12 @@
 </ion-header>
 
 
-<ion-content fullscreen>
-  <ion-list >
-    <ion-list-header>
-      Psicologia
-    </ion-list-header>
-    
-    <ion-item *ngFor="let p of profesionales" (click)="verDetalleProfesional(p)">
+<ion-content fullscreen >
+  <ion-list>
+    <ion-item *ngFor="let p of profesionales" (click)="verDetalleProfesional(p)" >
       <ion-label>
         <h2>{{ p.nombre_apellido }}</h2>
         <h3>{{ p.profesion_rama | uppercase }}</h3>
-        <p>{{ p.telefono_celular }}</p>
       </ion-label>
       <ion-icon name="data" item-end></ion-icon>
     </ion-item>

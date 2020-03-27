@@ -4,28 +4,28 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #ff8a38;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #787878;
+  --ion-color-primary-tint: #444;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary: #444;
   --ion-color-secondary-rgb: 61, 194, 255;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-shade: #000000;
+  --ion-color-secondary-tint: #333333;
 
   /** tertiary **/
-  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary: #e94235;
   --ion-color-tertiary-rgb: 82, 96, 255;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-  --ion-color-tertiary-shade: #4854e0;
-  --ion-color-tertiary-tint: #6370ff;
+  --ion-color-tertiary-shade: #af2e24;
+  --ion-color-tertiary-tint: #e83d30;
 
   /** success **/
   --ion-color-success: #2dd36f;
@@ -229,15 +229,16 @@
 
 }
 
-ion-content > div{
+ion-content{
+
+}
+
+.img-dashboard {
   --padding-top: 20px;
   --padding-left : 10px;
   --padding-right : 10px;
 }
 
-.img-dashboard {
-  
-  --padding-top: 20px;
-  --padding-left : 10px;
-  --padding-right : 10px;
+ion-list {
+  padding-top: 0px !important;
 }

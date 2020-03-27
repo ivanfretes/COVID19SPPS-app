@@ -37,8 +37,10 @@ export class TenesLosSintomasPage implements OnInit {
   }
 
   onSubmit(cuestionarioForm) {
-
-    if (isNaN(cuestionarioForm.edad) || 
+    
+    alert('Por el momento el test no se encuentra disponible')
+    
+    /*if (isNaN(cuestionarioForm.edad) || 
       cuestionarioForm.edad < MIN_EDAD ||
       cuestionarioForm.edad > MAX_EDAD){
         alert('Edad debe ser un número valido')
@@ -51,7 +53,7 @@ export class TenesLosSintomasPage implements OnInit {
       return;
     }
 
-    console.log(cuestionarioForm)
+    console.log(cuestionarioForm)*/
     
   }
 

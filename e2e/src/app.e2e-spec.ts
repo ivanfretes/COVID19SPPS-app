@@ -8,10 +8,10 @@ describe('new App', () => {
   });
   describe('default screen', () => {
     beforeEach(() => {
-      page.navigateTo('/Inicio');
+      page.navigateTo('/dasboard');
     });
-    it('should say Inbox', () => {
-      expect(page.getParagraphText()).toContain('Inicio');
+    it('should say Inicio', () => {
+      expect(page.getParagraphText()).toContain('Info sobre el Coronavirus en Paraguay')
     });
   });
 });

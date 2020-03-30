@@ -32,14 +32,12 @@ export class AppComponent implements OnInit {
       url: '/profesionales-list',
       icon: 'person'
     },
-    {
+    /*{
       title: 'Tenes Sintomas',
       url: '/tenes-los-sintomas',
       icon: 'heart'
     },
-    
-
-    /*{
+    {
       title: 'Noticias',
       url: '/fake-news',
       icon: 'trash'

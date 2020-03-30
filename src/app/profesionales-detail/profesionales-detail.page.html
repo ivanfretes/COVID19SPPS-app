@@ -27,31 +27,24 @@
       <ion-item>
         <ion-label><b>Disponibilidad:</b> <div [innerHTML]="profesional.hora_dia_disponible | titlecase "></div></ion-label>
       </ion-item>
-
-      <ion-item>
+    
+    <ion-item>
         <ion-label><b>Modalidad de Atención:</b> 
           <div *ngFor="let m of profesional.modalidad_atencion" [innerHTML]="m | titlecase"></div>
         </ion-label>
       </ion-item>
       
       <div *ngFor="let m of profesional.modalidad_atencion" (click)="contactarProfesional()">
-        <!--ion-button href="https://wa.me/595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}?text={{ subjectText }}" 
+        <ion-button href="https://wa.me/595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}?text={{ subjectText }}" 
             expand="block" 
             color="success"
             type="button"  
             *ngIf="m.toLowerCase() == 'whatsapp'"> Contactar al Whatsapp 
-        </ion-button-->
-
-		
-		<ion-button href="whatsapp:/send?phone=595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}&text={{ subjectText }}" 
-            expand="block" 
-            color="success"
-            type="button"  
-            *ngIf="m.toLowerCase() == 'whatsapp'"> Enviar un Whatsapp 
         </ion-button>
 
+
         <ion-button expand="block" 
-			href="mailto:{{ profesional.email.trim() }}&subject={{ subjectText }}"
+			      href="mailto:{{ profesional.email.trim() }}&subject={{ subjectText }}"
           	color="danger"
             type="button"  
             *ngIf="m.toLowerCase() == 'email'"> Enviar un Email
@@ -66,7 +59,7 @@
         <ion-button expand="block" 
           	color="primary"
             type="button"  
-			href="sms://+595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}"
+			      href="sms://+595{{ profesional.telefono_celular.substring(1,profesional.telefono_celular.length) }}"
             *ngIf="m.toLowerCase() == 'sms'"> Enviar un SMS
         </ion-button>
 
@@ -81,7 +74,6 @@
       </div>
       
     </ion-list>
-  
     
   
 </ion-content>

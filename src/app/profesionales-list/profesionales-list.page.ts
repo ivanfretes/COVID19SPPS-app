@@ -32,10 +32,10 @@ export class ProfesionalesListPage implements OnInit {
    * Visualiza mediante un modal el detalle de un profesional
    * @param profesional
    */
-  async verDetalleProfesional(profesional : any){
+  async verDetalleProfesional(profesional : IProfesional){
     let modalCtrl = await this.modalCtrl.create({
       component : ProfesionalesDetailPage,
-      componentProps : { profesional }
+      componentProps : { profesional : profesional }
     });
     modalCtrl.present();
   }

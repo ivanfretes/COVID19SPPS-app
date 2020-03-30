@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavParams, ModalController } from '@ionic/angular';
 
 import { ProfesionalesDetailPage } from './profesionales-detail.page';
+import { profesionales } from 'src/mocks/profesionales';
 
 describe('ProfesionalesDetailPage', () => {
   let component: ProfesionalesDetailPage;
@@ -10,7 +11,11 @@ describe('ProfesionalesDetailPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ProfesionalesDetailPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot()],
+      providers : [
+        NavParams,
+        ModalController
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProfesionalesDetailPage);
@@ -18,7 +23,21 @@ describe('ProfesionalesDetailPage', () => {
     fixture.detectChanges();
   }));
 
+  afterEach(async () => {
+    TestBed.configureTestingModule({
+      declarations: [ ProfesionalesDetailPage ],
+      imports: [IonicModule.forRoot()],
+      providers : [
+        NavParams
+      ]
+    }).compileComponents();
+  })
+
   it('should create', () => {
-    expect(component).toBeTruthy();
+    let profesionalTmp;
+    component.ngOnInit()
+    profesionalTmp = component.profesional
+    expect(component.profesional).toBe(profesionales.find(
+      (profesional) => profesional.registro_nro == profesionalTmp.registro_nro));
   });
 });

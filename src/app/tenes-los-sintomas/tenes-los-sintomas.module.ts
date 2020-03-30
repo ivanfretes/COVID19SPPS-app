@@ -17,6 +17,9 @@ import { TenesLosSintomasPage } from './tenes-los-sintomas.page';
     ReactiveFormsModule
   ],
   declarations: [TenesLosSintomasPage],
-  schemas : [CUSTOM_ELEMENTS_SCHEMA]
+  schemas : [CUSTOM_ELEMENTS_SCHEMA],
+  exports : [
+    ReactiveFormsModule
+  ]
 })
 export class TenesLosSintomasPageModule {}

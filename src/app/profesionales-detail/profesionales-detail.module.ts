@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavParams } from '@ionic/angular';
 
 import { ProfesionalesDetailPageRoutingModule } from './profesionales-detail-routing.module';
 import { ProfesionalesDetailPage } from './profesionales-detail.page';
@@ -16,6 +16,10 @@ import { ProfesionalesDetailPage } from './profesionales-detail.page';
   ],
   declarations: [
     ProfesionalesDetailPage
-  ]
+  ],
+  
+  providers: [
+    NavParams
+  ],
 })
 export class ProfesionalesDetailPageModule {}

@@ -9,21 +9,35 @@ import { IProfesional } from 'src/models/profesional';
 })
 export class ProfesionalesDetailPage implements OnInit {
 
-  profesional : IProfesional
+  profesional : IProfesional = {
+    email : '',
+    hora_dia_disponible : '',
+    nombre_apellido : '',
+    nro_socio : '',
+    profesion_rama : '',
+    registro_nro : '',
+    telefono_celular : '',
+    modalidad_atencion : ''
+  }
   subjectText : "Buenas, me comunico desde COVID19py App"
 
   constructor(
     public navParams : NavParams,
     public modalCtrl : ModalController
   ) { 
-    this.profesional = this.navParams.get('profesional');
+    
   }
 
   ngOnInit() {
+    this.profesional = this.navParams.get('profesional');
   }
 
   dismissModal(){
     this.modalCtrl.dismiss();
+  }
+
+  contactarPorSkype(){
+    alert(`Busque en skype la cuenta: ${this.profesional.email}`)  
   }
 
   contactarProfesional(){

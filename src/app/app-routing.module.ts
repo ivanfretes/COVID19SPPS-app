@@ -8,10 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'acerca-covid19',
     loadChildren: () => import('./acerca-covid19/acerca-covid19.module').then( m => m.AcercaCovid19PageModule)
   },

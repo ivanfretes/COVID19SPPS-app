@@ -13,8 +13,7 @@ describe('ProfesionalesDetailPage', () => {
       declarations: [ ProfesionalesDetailPage ],
       imports: [IonicModule.forRoot()],
       providers : [
-        NavParams,
-        ModalController
+        NavParams
       ]
     }).compileComponents();
 
@@ -23,21 +22,7 @@ describe('ProfesionalesDetailPage', () => {
     fixture.detectChanges();
   }));
 
-  afterEach(async () => {
-    TestBed.configureTestingModule({
-      declarations: [ ProfesionalesDetailPage ],
-      imports: [IonicModule.forRoot()],
-      providers : [
-        NavParams
-      ]
-    }).compileComponents();
-  })
-
   it('should create', () => {
-    let profesionalTmp;
-    component.ngOnInit()
-    profesionalTmp = component.profesional
-    expect(component.profesional).toBe(profesionales.find(
-      (profesional) => profesional.registro_nro == profesionalTmp.registro_nro));
+    expect(component).toBeTruthy();
   });
 });

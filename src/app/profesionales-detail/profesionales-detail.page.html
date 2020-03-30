@@ -1,6 +1,6 @@
 <ion-header translucent>
   <ion-toolbar color="tertiary">
-    <ion-title>{{ profesional.nombre_apellido | titlecase }}</ion-title>
+    <ion-title *ngIf="profesional != undefined">{{ profesional.nombre_apellido | titlecase }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismissModal()">Cerrar</ion-button>
     </ion-buttons>
@@ -8,7 +8,7 @@
 </ion-header> 
 
 <ion-content>
-    <ion-list>
+    <ion-list *ngIf="profesional != undefined">
       <ion-item>
         <ion-label><b>Área:</b> {{ profesional.profesion_rama | titlecase }}</ion-label>
       </ion-item>

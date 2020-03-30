@@ -9,7 +9,7 @@ import { IProfesional } from 'src/models/profesional';
 })
 export class ProfesionalesDetailPage implements OnInit {
 
-  profesional : IProfesional = {
+  profesional : undefined|IProfesional = {
     email : '',
     hora_dia_disponible : '',
     nombre_apellido : '',
@@ -25,11 +25,11 @@ export class ProfesionalesDetailPage implements OnInit {
     public navParams : NavParams,
     public modalCtrl : ModalController
   ) { 
-    
+    this.profesional = this.navParams.get('profesional');
   }
 
   ngOnInit() {
-    this.profesional = this.navParams.get('profesional');
+    
   }
 
   dismissModal(){

@@ -8,10 +8,24 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+<<<<<<< HEAD
+=======
+    path: 'acerca-covid19',
+    loadChildren: () => import('./acerca-covid19/acerca-covid19.module').then( m => m.AcercaCovid19PageModule)
+  },
+  {
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
+<<<<<<< HEAD
+=======
+    path: 'tenes-los-sintomas',
+    loadChildren: () => import('./tenes-los-sintomas/tenes-los-sintomas.module').then( m => m.TenesLosSintomasPageModule)
+  },
+  {
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
     path: 'noticias-list',
     loadChildren: () => import('./noticias-list/noticias-list.module').then( m => m.NoticiasListPageModule)
   },

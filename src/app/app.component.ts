@@ -21,11 +21,38 @@ export class AppComponent implements OnInit {
       url: '/dashboard',
       icon: 'home'
     },
+<<<<<<< HEAD
+=======
+
+    /*{
+      title: 'Numeros de Télefonos',
+      url: '/numeros-de-telefono',
+      icon: 'paper-plane'
+    },*/
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
     {
       title: 'Ayuda de Profesionales',
       url: '/profesionales-list',
       icon: 'person'
     },
+<<<<<<< HEAD
+=======
+    /*{
+      title: 'Tenes Sintomas',
+      url: '/tenes-los-sintomas',
+      icon: 'heart'
+    },
+    {
+      title: 'Noticias',
+      url: '/fake-news',
+      icon: 'trash'
+    },*/
+    {
+      title: 'Acerca del Covid19',
+      url: '/acerca-covid19',
+      icon: 'warning'
+    },
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
     {
       title: 'Acerca de la App',
       url: '/colabora-con-la-app',
@@ -33,6 +60,10 @@ export class AppComponent implements OnInit {
     },
     
   ];
+<<<<<<< HEAD
+=======
+  //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
 
   constructor(
     private platform: Platform,
@@ -48,9 +79,24 @@ export class AppComponent implements OnInit {
       this.splashScreen.hide();
     });
 
+<<<<<<< HEAD
   }
 
   ngOnInit() {
     console.log('Init app')
+=======
+
+    // GET nueva version
+    setTimeout(()=> {
+      //this.existeNuevaCompilacion = true; 
+    }, 5000)
+  }
+
+  ngOnInit() {
+    /*const path = window.location.pathname.split('folder/')[1];
+    if (path !== undefined) {
+      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    }*/
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
   }
 }

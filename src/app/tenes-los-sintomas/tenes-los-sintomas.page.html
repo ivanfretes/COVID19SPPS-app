@@ -1,0 +1,170 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Test de COVID-19</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    
+    <form [formGroup]="cuestionarioForm" (ngSubmit)="onSubmit(cuestionarioForm.value)">
+        <ion-item>
+            <ion-label>¿Cómo te sentis?</ion-label>
+            <ion-select 
+                formControlName="como_te_sintis"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="M">Mal</ion-select-option>
+                <ion-select-option value="B">Bien</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Sexo</ion-label>
+            <ion-select 
+                formControlName="sexo"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="M">Masculino</ion-select-option>
+                <ion-select-option value="F">Femenino</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Edad</ion-label>
+            <ion-input type="text" 
+                formControlName="edad"
+                cancelText="Cancelar"
+                okText="Confirmar"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Realizaste algun viaje ultimamente</ion-label>
+            <ion-select 
+                formControlName="viajaste"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>¿Contacto con alguien que contrajo el COVID19?</ion-label>
+            <ion-select 
+                formControlName="contacto_covid19"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tiene Tos?</ion-label>
+            <ion-select 
+                formControlName="tos"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Fiebre, temperatura mayor a 38º C</ion-label>
+            <ion-select 
+                formControlName="fiebre_mas_38"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Dolor de Cabeza</ion-label>
+            <ion-select 
+                formControlName="dolor_cabeza"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Goteo Nasal</ion-label>
+            <ion-select 
+                formControlName="goteo_nasal"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Dificultad para respirar</ion-label>
+            <ion-select 
+                formControlName="dificultad_respirar"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Tiene otras enfermedades (Describa por favor?)</ion-label>
+            <ion-input type="text" 
+                formControlName="enfermedades_relacionadas"
+                cancelText="Cancelar"
+                okText="Confirmar"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Es personal Médico?</ion-label>
+            <ion-select 
+                formControlName="trabajas_con_pacientes"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Si</ion-select-option>
+                <ion-select-option value="N">No</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Ciudad</ion-label>
+            <ion-input type="text" 
+                formControlName="ciudad_de_residencia"
+                cancelText="Cancelar"
+                okText="Confirmar"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Barrio</ion-label>
+            <ion-input type="text" 
+                formControlName="barrio_de_residencia"
+                cancelText="Cancelar"
+                okText="Confirmar" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Realmente tienes estos sintomas?</ion-label>
+            <ion-select 
+                formControlName="es_prueba"
+                cancelText="Cancelar"
+                okText="Confirmar">
+                <ion-select-option value="S">Estoy Probando el APP</ion-select-option>
+                <ion-select-option value="N">Tengo los sintomas</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-button expand="block" type="submit">
+            Enviar
+        </ion-button>
+    </form>
+</ion-content>

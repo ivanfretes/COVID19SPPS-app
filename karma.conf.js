@@ -18,7 +18,17 @@ module.exports = function (config) {
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage'),
       reports: ['html', 'lcovonly', 'text-summary'],
+<<<<<<< HEAD
       fixWebpackSourcePaths: true
+=======
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        statements: 80,
+        lines: 80,
+        branches: 80,
+        functions: 80
+      }
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
@@ -26,6 +36,17 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
+<<<<<<< HEAD
     singleRun: false
+=======
+    singleRun: false,
+    browsers: ['Chrome'],
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
+>>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
   });
 };

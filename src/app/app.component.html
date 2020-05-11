@@ -3,13 +3,8 @@
     <ion-menu contentId="main-content" type="overlay" color="primary">
       <ion-content>
         <ion-list id="inbox-list">
-<<<<<<< HEAD
           <ion-list-header> SPPs </ion-list-header>
           <ion-note>Socieadad Paraguaya de Psicologia</ion-note>
-=======
-          <ion-list-header>COVID19Py</ion-list-header>
-          <ion-note>Info sobre el Coronavirus en Paraguay</ion-note>
->>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
@@ -19,20 +14,12 @@
           </ion-menu-toggle>
         </ion-list>
 
-<<<<<<< HEAD
         <!--ion-list id="inbox-list">
-=======
-        <ion-list id="inbox-list">
->>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
           <ion-item *ngIf="existeNuevaCompilacion">
             <ion-icon slot="start" ios="  " md="bookmark-sharp"></ion-icon>
             <ion-label>Actualiza a la última versión</ion-label>
           </ion-item>
-<<<<<<< HEAD
         </ion-list--> 
-=======
-        </ion-list> 
->>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

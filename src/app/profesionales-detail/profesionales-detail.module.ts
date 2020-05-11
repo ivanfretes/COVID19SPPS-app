@@ -17,12 +17,5 @@ import { ProfesionalesDetailPage } from './profesionales-detail.page';
   declarations: [
     ProfesionalesDetailPage
   ],
-<<<<<<< HEAD
-=======
-  
-  providers: [
-    NavParams
-  ],
->>>>>>> ec17480f9c8f553f64c29d0d8cc56d7b972cac5f
 })
 export class ProfesionalesDetailPageModule {}
